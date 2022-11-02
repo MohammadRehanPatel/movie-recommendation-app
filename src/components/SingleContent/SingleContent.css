@@ -1,7 +1,7 @@
 .media {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 250px;
     padding: 5px;
     margin: 5px 0;
     background-color: #282c34;
@@ -37,6 +37,5 @@
     justify-content: space-between;
     padding-bottom: 3px;
     padding: 0 2px;
-    padding-bottom: 3px;
   }
 

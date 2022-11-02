@@ -5,6 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import MovieIcon from '@mui/icons-material/Movie';
 import  TvIcon from '@mui/icons-material/Tv';
 import {useNavigate} from 'react-router-dom'
+
  
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
@@ -25,8 +26,8 @@ export default function SimpleBottomNavigation() {
     }
   }, [value,navigate])
   
+ 
   return (
-
     <Box  sx={{
       width: '100%',
       position:'fixed',
