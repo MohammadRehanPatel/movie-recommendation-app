@@ -1,5 +1,5 @@
 import  React,{useEffect} from 'react';
-import {Box,BottomNavigation,BottomNavigationAction} from '@mui/material';
+import {Box,BottomNavigation,BottomNavigationAction, ThemeProvider,createTheme} from '@mui/material';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import SearchIcon from '@mui/icons-material/Search';
 import MovieIcon from '@mui/icons-material/Movie';
@@ -25,17 +25,28 @@ export default function SimpleBottomNavigation() {
       navigate('/search')
     }
   }, [value,navigate])
-  
+  const themeDark = createTheme({
+    palette: {
+      background: {
+        default: "#222222"
+      },
+      text: {
+        primary: "#ffffff"
+      }
+    }
+  });
  
   return (
+    
+    <ThemeProvider theme={themeDark}>
     <Box  sx={{
       width: '100%',
       position:'fixed',
       bottom:0,
-      backgroundColor:"#083aa4a3",
+      // backgroundColor:"#083aa4a3",
       zIndex:100,
     }}
-    backgroundColor='#083aa4a3'
+    // backgroundColor='#083aa4a3'
     >
       <BottomNavigation
         showLabels
@@ -50,5 +61,6 @@ export default function SimpleBottomNavigation() {
         <BottomNavigationAction label="Search" icon={<SearchIcon />} />
       </BottomNavigation>
     </Box>
+          </ThemeProvider>
   );
 }
